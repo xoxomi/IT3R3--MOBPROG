@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button, TouchableHighlight, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import styles from './styles';
+import styles from './style2';
 
 
 const CustomButton = ({ title, onPress, buttonStyle }) => (

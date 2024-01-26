@@ -5,7 +5,6 @@ import LoginScreen from './Authentication/LoginScreens';
 import SignUpScreen from './Authentication/SignUpScreen';
 import ForgotPasswordScreen from './Authentication/ForgotPasswordScreen';
 import Profile from './Profile';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const Stack = createStackNavigator();
