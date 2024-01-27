@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { View, Text, Image, TextInput, Button, Alert, useWindowDimensions, ScrollView, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from '../styles';
-
+import Logo from '../assets/Image/degreedealslogo.png'
+import Buttons from '../Buttons';
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -30,14 +31,21 @@ const LoginScreen = ({ navigation }) => {
     }
   };
 
+  const onSignInFacebook = () => {
+    console.warn('onSignInFacebook');
+  };
+
+  const onSignInGoogle = () => {
+    console.warn('onSignInGoogle');
+  };
+
+  const onSignInApple = () => {
+    console.warn('onSignInApple');
+  };
+
   return (
-    <View style={{ width: 358,flex: 1, justifyContent: 'center', }} >
-      <View style={styles.shapeContainer}>
-        <View style={styles.circle}>
-          <Text style={styles.headerText}>Degree Deals</Text>
-        </View>
-      </View>
-      
+    <View style={styles.root}>
+       
       <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
@@ -62,6 +70,25 @@ const LoginScreen = ({ navigation }) => {
         title="Forgot Password"
         onPress={() => navigation.navigate('Forgot Password')} color="lightslategrey" 
       />
+
+      <Buttons 
+          text="Sign In with Facebook" 
+          onPress={onSignInFacebook}
+          bgColor="#E7EAF4"
+          fgColor="#4765A9"
+          />
+      <Buttons 
+          text="Sign In with Google" 
+          onPress={onSignInGoogle}
+          bgColor="#FAE9EA"
+          fgColor="#DD4D44"
+          />
+      <Buttons
+          text="Sign In with Apple" 
+          onPress={onSignInApple}
+          bgColor="#e3e3e3"
+          fgColor="#363636"
+          />
     </View>
   );
 };
