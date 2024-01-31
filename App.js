@@ -12,10 +12,14 @@ import { EditProfile } from './Screen';
 import BottomTabNav from './navigations/BottomTabNav';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 SplashScreen.preventAutoHideAsync();
 >>>>>>> 492e0233d34b58f93e1d6c9f47a662b257fcc480
+=======
+
+>>>>>>> parent of 4b5cfc5 (commit)
 const Stack = createStackNavigator();
 
 
@@ -62,7 +66,3 @@ const App = () => {
 
   
 export default App;
-
-
-
-
