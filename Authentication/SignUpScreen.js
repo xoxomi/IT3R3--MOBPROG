@@ -3,9 +3,6 @@ import { View, Text, TextInput, Button, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from '../styles';
 
-
-
-
 const SignUpScreen = ({ navigation }) => {
   const [newUsername, setNewUsername] = useState('');
   const [newName, setNewName] = useState('');
@@ -75,7 +72,7 @@ const SignUpScreen = ({ navigation }) => {
       </View>
       <View style={styles.labelContainer}>
         <Text style={styles.label}>New Password</Text>
-        <TextInput
+        <TextInput 
           style={styles.input}
           placeholder="New Password"
           onChangeText={text => setNewPassword(text)}
@@ -118,8 +115,6 @@ const SignUpScreen = ({ navigation }) => {
     />
   </View>
 </View>
-
-      
 
     </View>
   );
